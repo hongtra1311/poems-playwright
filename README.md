@@ -1,14 +1,15 @@
-# Petstore Playwright Automation
+# POEMS Playwright Automation
 
-Automation test project using Playwright for https://petstore.octoperf.com
+Automation test project using Playwright for https://poets.org/
 
 ## 📌 Features
 
-- Basic sanity tests
-- Search flow
-- Add to cart
-- HTML report + video/screenshot on failure
-- Page Object Model
+- Home Page.
+- Search poems
+  - Search The Waste Land by T.S.Eliot.
+  - Search invalid input.
+- Read The Waste Land.
+- View information of poet.
 
 ## 💻 Setup
 

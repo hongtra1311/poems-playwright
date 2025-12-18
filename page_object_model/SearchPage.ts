@@ -1,5 +1,10 @@
 import { Page } from "@playwright/test";
-import { THE_WASTE_LAND } from "../contents/searchContent";
+import {
+  APRIL_IS_THE_CRUELLEST_MONTH,
+  APRIL_IS_THE_CRUELLEST_MONTH_SUMMARY,
+  THE_WASTE_LAND,
+  THE_WASTE_LAND_SUMMARY,
+} from "../contents/searchContent";
 
 export class SearchPage {
   readonly page: Page;
@@ -12,6 +17,22 @@ export class SearchPage {
     return this.page.getByRole("link", {
       name: THE_WASTE_LAND,
       exact: true,
+    });
+  }
+  get theWasteLandDescription() {
+    return this.page.getByText(THE_WASTE_LAND_SUMMARY, { exact: true });
+  }
+
+  get aprilIsTheCruelestMonth() {
+    return this.page.getByRole("link", {
+      name: APRIL_IS_THE_CRUELLEST_MONTH,
+      exact: true,
+    });
+  }
+
+  get aprilIsTheCruelestMonthDescription() {
+    return this.page.getByText(APRIL_IS_THE_CRUELLEST_MONTH_SUMMARY, {
+      exact: false,
     });
   }
 }
