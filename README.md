@@ -17,3 +17,29 @@ Automation test project using Playwright for https://poets.org/
 npm install
 npx playwright install
 ```
+
+## Run test cases
+
+To run search feature
+
+```bash
+npx playwright test --grep @search
+```
+
+To run home feature
+
+```bash
+npx playwright test --grep @smoke
+```
+
+To run poem detail feature
+
+```bash
+npx playwright test --grep @poem
+```
+
+To run all test cases
+
+```bash
+npx playwright test
+```
