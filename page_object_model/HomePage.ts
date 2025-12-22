@@ -2,6 +2,7 @@ import { Page } from "@playwright/test";
 import {
   ACADEMY_AMERICAN_POETS,
   AMERICAN_POETS_MAGAZINE,
+  HOME_HREF,
   NATIONAL_POETRY_MONTH,
 } from "../contents/homeContent";
 
@@ -32,6 +33,10 @@ export class HomePage {
   }
 
   async navigate() {
-    await this.page.goto("https://poets.org/");
+    await this.page.goto(HOME_HREF);
+  }
+
+  async navigateSpecificUrl(url: string) {
+    await this.page.goto(url);
   }
 }
