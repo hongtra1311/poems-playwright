@@ -27,7 +27,6 @@ test("@search Search valid keyword", async ({ homePage, searchPage }) => {
   // Navigate back to search results
   await homePage.page.goBack();
   // Click on April is the Cruelest Month link and verify navigation
-  // test.info().annotations.push({ type: "flaky" });
   await searchPage.aprilIsTheCruelestMonth.click();
   await expect(homePage.page).toHaveURL(APRIL_IS_THE_CRUELLEST_MONTH_FULL_HREF);
 });

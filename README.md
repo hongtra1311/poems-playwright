@@ -2,7 +2,7 @@
 
 Automation test project using Playwright for https://poets.org/
 
-## 📌 Features
+## Features
 
 - Home Page.
 - Search poems
@@ -11,7 +11,7 @@ Automation test project using Playwright for https://poets.org/
 - Read The Waste Land.
 - View information of poet.
 
-## 💻 Setup
+## Setup
 
 ```bash
 npm install
