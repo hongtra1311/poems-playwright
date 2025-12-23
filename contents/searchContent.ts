@@ -13,3 +13,5 @@ export const APRIL_IS_THE_CRUELLEST_MONTH_SUMMARY =
 export const THE_WASTE_LAND_FULL_HREF = "https://poets.org/poem/waste-land";
 export const APRIL_IS_THE_CRUELLEST_MONTH_FULL_HREF =
   "https://poets.org/text/april-cruelest-month-especially-tax-day";
+
+export const NO_RESULT = "Your search didn't turn up any results.";

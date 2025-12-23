@@ -43,3 +43,7 @@ To run all test cases
 ```bash
 npx playwright test
 ```
+
+## Key issues and risks
+
+1. The tests rely on exact UI text and DOM contents from https://poets.org/, which are outside my control and may change at any time.

@@ -30,3 +30,12 @@ test("@search Search valid keyword", async ({ homePage, searchPage }) => {
   await searchPage.aprilIsTheCruelestMonth.click();
   await expect(homePage.page).toHaveURL(APRIL_IS_THE_CRUELLEST_MONTH_FULL_HREF);
 });
+
+test("@search Search invalid keyword", async ({ homePage, searchPage }) => {
+  await homePage.page.fill(
+    searchInput,
+    "johndoejohndoejohndoejohndoejohndoejohndoejohndoe"
+  );
+  await homePage.page.press(searchInput, "Enter");
+  await expect(searchPage.noResult).toBeVisible();
+});

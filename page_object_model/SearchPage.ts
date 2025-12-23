@@ -2,6 +2,7 @@ import { Page } from "@playwright/test";
 import {
   APRIL_IS_THE_CRUELLEST_MONTH,
   APRIL_IS_THE_CRUELLEST_MONTH_SUMMARY,
+  NO_RESULT,
   THE_WASTE_LAND,
   THE_WASTE_LAND_SUMMARY,
 } from "../contents/searchContent";
@@ -34,5 +35,9 @@ export class SearchPage {
     return this.page.getByText(APRIL_IS_THE_CRUELLEST_MONTH_SUMMARY, {
       exact: false,
     });
+  }
+
+  get noResult() {
+    return this.page.getByText(NO_RESULT, { exact: false });
   }
 }
