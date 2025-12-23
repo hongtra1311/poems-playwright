@@ -20,7 +20,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
 
-    "types": ["node", "playwright"]
+    "types": ["node", "@playwright/test"]
   },
   "include": ["**/*.ts"],
   "exclude": ["node_modules", "dist"]

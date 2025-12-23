@@ -4,3 +4,6 @@ node_modules/
 # Test artifacts
 playwright-report/
 test-results/
+.env
+traces/
+videos/

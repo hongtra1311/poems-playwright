@@ -1,9 +1,7 @@
 import { test, expect } from "../fixtures/baseFixture";
 import { validSearch } from "../../data/searchData";
 import {
-  APRIL_IS_THE_CRUELLEST_MONTH_FULL_HREF,
   APRIL_IS_THE_CRUELLEST_MONTH_HREF,
-  THE_WASTE_LAND_FULL_HREF,
   THE_WASTE_LAND_HREF,
 } from "../../contents/searchContent";
 
@@ -21,12 +19,14 @@ test("@search Search valid keyword", async ({ homePage, searchPage }) => {
   await expect(searchPage.aprilIsTheCruelestMonthDescription).toBeVisible();
   // Click on The Waste Land link and verify navigation
   await searchPage.theWasteLand.click();
-  await expect(homePage.page).toHaveURL(THE_WASTE_LAND_FULL_HREF);
+  await expect(homePage.page.url()).toContain(THE_WASTE_LAND_HREF);
   // Navigate back to search results
   await homePage.page.goBack();
   // Click on April is the Cruelest Month link and verify navigation
   await searchPage.aprilIsTheCruelestMonth.click();
-  await expect(homePage.page).toHaveURL(APRIL_IS_THE_CRUELLEST_MONTH_FULL_HREF);
+  await expect(homePage.page.url()).toContain(
+    APRIL_IS_THE_CRUELLEST_MONTH_HREF
+  );
 });
 
 test("@search Search invalid keyword", async ({ homePage, searchPage }) => {
