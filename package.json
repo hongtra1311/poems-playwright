@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:search": "playwright test --grep @search",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:poem": "playwright test --grep @poem"
   },
   "keywords": [],
   "author": "",

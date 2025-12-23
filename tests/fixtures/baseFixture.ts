@@ -1,7 +1,7 @@
 import { test as Page } from "@playwright/test";
-import { HomePage } from "../../page_object_model/HomePage";
-import { SearchPage } from "../../page_object_model/SearchPage";
-import { PoemPage } from "../../page_object_model/PoemPage";
+import { HomePage } from "../../pages/HomePage";
+import { SearchPage } from "../../pages/SearchPage";
+import { PoemPage } from "../../pages/PoemPage";
 
 type PtFixtures = {
   homePage: HomePage;

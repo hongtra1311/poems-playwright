@@ -5,7 +5,7 @@ import {
   HOME_HREF,
   NATIONAL_POETRY_MONTH,
 } from "../contents/homeContent";
-
+export const searchInput = 'input[name="combine"]';
 export class HomePage {
   readonly page: Page;
 
@@ -38,5 +38,10 @@ export class HomePage {
 
   async navigateSpecificUrl(url: string) {
     await this.page.goto(url);
+  }
+
+  async searchFor(query: string) {
+    await this.page.fill(searchInput, query);
+    await this.page.press(searchInput, "Enter");
   }
 }

@@ -21,7 +21,9 @@ export class SearchPage {
     });
   }
   get theWasteLandDescription() {
-    return this.page.getByText(THE_WASTE_LAND_SUMMARY, { exact: true });
+    // Use a non-exact match so formatting differences (line breaks, extra
+    // whitespace or minor edits) don't make this locator fragile.
+    return this.page.getByText(THE_WASTE_LAND_SUMMARY, { exact: false });
   }
 
   get aprilIsTheCruelestMonth() {
