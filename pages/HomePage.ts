@@ -33,6 +33,17 @@ export class HomePage {
 
   async navigate() {
     await this.page.goto("/");
+    await this.acceptCookieConsent();
+  }
+
+  async acceptCookieConsent() {
+    const acceptButton = this.page.getByRole("button", {
+      name: "Accept All",
+      exact: true,
+    });
+    if (await acceptButton.isVisible({ timeout: 5000 }).catch(() => false)) {
+      await acceptButton.click();
+    }
   }
 
   async navigateSpecificUrl(url: string) {
@@ -42,5 +53,6 @@ export class HomePage {
   async searchFor(query: string) {
     await this.page.fill(searchInput, query);
     await this.page.press(searchInput, "Enter");
+    await this.acceptCookieConsent();
   }
 }
